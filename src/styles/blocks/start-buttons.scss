@@ -1,0 +1,29 @@
+.start-buttons {
+  &_item {
+    padding: 11px 20px;
+
+    border: 1px solid #4CB649;
+    border-radius: 30px;
+    color: #4CB649;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    transition: all $transitionTime;
+
+    &:hover {
+      background: linear-gradient(0deg, rgb(78, 181, 74) 0%, rgb(93, 223, 90) 100%);
+      color: #fff;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &--log-in {
+      @include onTablet {
+        display: none;
+       }
+    }
+  }
+}

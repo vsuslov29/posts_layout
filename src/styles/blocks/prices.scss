@@ -1,0 +1,196 @@
+.prices {
+  background: linear-gradient(135deg, #3D4251 0%, #272B35 100%);
+  margin: 0 -30px;
+  padding: 0 20px;
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 57px;
+  }
+
+  &_title {
+    margin-bottom: 60px;
+
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+
+    @include onLargeTablet {
+      text-align: center;
+    }
+  }
+
+  &_list {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 87px 40px;
+
+    background: #FFFFFF;
+    border: 4px solid #EBECED;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.501961);
+
+    &:hover {
+      transform: scale(1);
+      @include onTablet {
+        transform: none;
+        border: 4px solid #FF8D00;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: -4px;
+      bottom: 0;
+      right: -4px;
+
+      background-color: #fff;
+      border: 4px solid #EBECED;
+      border-radius: 6px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.501961);
+      transition: all $transitionTime;
+    }
+
+    &:hover::before { 
+      transform: scaleY(1.1);
+    }
+
+
+    @include onTablet {
+      padding: 48px 55px 40px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 48px 20px 40px;
+    }
+  }
+
+  &_period {
+    position: relative;
+    margin-bottom: 30px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    color: #323642;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 26px;
+      left: 50%;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: #4CB649;
+      transform: translateX(-50%);
+    }
+  }
+
+  &_button {
+    padding: 10px 72px;
+  }
+
+  &_amount {
+    position: relative;
+    width: 100%;
+    margin-bottom: 27px;
+    padding-bottom: 18px;
+
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -1.5px;
+    color: #22252E;
+    text-align: center;
+    border-bottom: 1px solid #EBECED;
+
+    &--discount {
+      margin-bottom: 16px;
+    }
+
+    &::before {
+      content: '$';
+      position: absolute;
+      top: 10px;
+      left: 35px;
+
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 32px;
+      color: #22252E;
+    }
+
+    &::after {
+      content: '/mo.';
+      position: absolute;
+      bottom: 20px;
+      right: 2px;
+
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 32px;
+      color: #22252E;
+    }
+  }
+
+  &_benefits {
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #323642;
+  }
+
+  &_discount {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  &_prev-price {
+    margin-right: 8px;
+
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration-line: line-through;
+    color: #F24458;
+  }
+
+  &_new-price {
+    font-size: 14px;
+    line-height: 22px;
+    color: #323642;
+  }
+
+  &_save {
+    margin-bottom: 15px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: #323642;
+  }
+}

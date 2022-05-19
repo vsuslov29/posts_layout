@@ -1,0 +1,53 @@
+.tags {
+  padding: 30px 0 40px;
+
+  @media (max-width: 1030px) {
+    display: none;
+  }
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+
+    background-color: #F7F7F7;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323642;
+  }
+
+  &_content {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  &_title {
+    margin-right: 43px;
+  }
+
+  &_list {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &_item {
+    border-bottom: 2px solid transparent;
+    transition: all $transitionTime;
+
+    &:hover {
+      border-bottom: 2px solid #4CB649;
+    }
+  }
+
+  &_link {   
+    color: #4CB649;
+  }
+
+  &_contacts {
+    display: flex;
+    column-gap: 30px;
+  }
+}

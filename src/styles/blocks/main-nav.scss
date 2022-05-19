@@ -1,0 +1,37 @@
+.main-nav {
+  @include onLargeTablet {
+   display: none;
+  }
+
+  &_list {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    color: $menuTextColor;
+    font-size: $menuFontSize;
+    font-weight: $menuFontWeight;
+    line-height: $menuLineHeight;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 95%;
+      height: 3px;
+
+      transition: all $transitionTime;
+    }
+
+    &:hover::after {
+      background-color: #4CB649;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.post-author {
+  &_name {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #323642;
+  }
+
+  &_date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #889099;
+  }
+
+  &_source {
+    margin-bottom: 15px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #4CB649;
+  }
+
+  &_comments {
+    display: flex;
+    align-items: center;
+  }
+
+  &_i {
+    margin-right: 12px;
+  }
+
+  &_comments-amount {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #889099;
+  }
+}

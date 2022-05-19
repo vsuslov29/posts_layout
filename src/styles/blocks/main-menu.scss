@@ -1,0 +1,33 @@
+.main-menu {
+  height: 100vh;
+  padding: 80px 35px;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform $transitionTime;
+
+  &:target {
+    transform: translateX(0);
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  &_item {
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      top: 30px;
+    }
+  }
+}

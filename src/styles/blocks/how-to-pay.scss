@@ -1,0 +1,43 @@
+.how-to-pay {
+  &_link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #4CB649;
+    transition: all $transitionTime;
+    border-bottom: 1px solid transparent;
+
+    &:first-child {
+      margin-right: 70px;
+
+      @include onTablet {
+        margin: 0 0 40px 0;
+      }
+    }
+
+    &::after {
+      content: '→';
+      position: absolute;
+      top: 0;
+      right: -25px;
+
+      color: #4CB649;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #4CB649;
+    }
+  }
+
+  @include onTablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

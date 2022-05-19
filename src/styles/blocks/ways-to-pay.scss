@@ -1,0 +1,35 @@
+.ways-to-pay {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &_title {
+    display: inline-block;
+    margin-right: 30px;
+
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+
+    @include onTablet {
+      margin: 0;
+    }
+  }
+
+  &_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+
+    @include onTablet {
+      justify-content: space-around;
+      gap: 10px;
+    }
+  }
+
+  @include onTablet {
+    flex-direction: column;
+  }
+}

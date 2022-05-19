@@ -1,0 +1,35 @@
+.main-post {
+  @media (max-width: 1030px) {
+    margin-bottom: 40px;
+  }
+
+  &_container {
+    display: flex;
+
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.101961);
+    border: 1px solid #D7D8D9;
+    border-radius: 6px;
+
+    @include onTablet {
+      flex-direction: column;
+    }
+  }
+
+  &_content {
+    padding: 60px 60px 40px;
+  }
+
+  &_title {
+     margin-bottom: 84px;
+  }
+
+  &_i {
+    width: 50%;
+    object-fit: cover;
+
+    @include onTablet {
+      width: 100%;
+      min-width: 280px;
+    }
+  }
+}
